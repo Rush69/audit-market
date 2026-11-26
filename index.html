@@ -14,12 +14,75 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/audit-market/assets/index-BZWy-JMc.js"></script>
+    <style>
+      /* Boot splash: shown before the JS bundle loads so the page is
+         never blank. React replaces #root's contents on mount. */
+      .boot-splash {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: #070512;
+        color: #ece9f7;
+        font-family: Inter, -apple-system, "Segoe UI", Roboto, sans-serif;
+        text-align: center;
+        padding: 24px;
+      }
+      .boot-mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #8b5cf6, #a855f7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 800;
+        color: #fff;
+      }
+      .boot-name {
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .boot-ring {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 3px solid rgba(139, 92, 246, 0.25);
+        border-top-color: #a855f7;
+        animation: boot-spin 0.9s linear infinite;
+      }
+      @keyframes boot-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .boot-text {
+        color: #9a93b8;
+        font-size: 0.95rem;
+      }
+      .boot-tag {
+        color: #9a93b8;
+        font-size: 0.85rem;
+      }
+    </style>
+    <script type="module" crossorigin src="/audit-market/assets/index-DIfoAkbk.js"></script>
     <link rel="modulepreload" crossorigin href="/audit-market/assets/solana-Dk7RSIwo.js">
     <link rel="modulepreload" crossorigin href="/audit-market/assets/wallet-BiNxxNIE.js">
-    <link rel="stylesheet" crossorigin href="/audit-market/assets/index-C57JL0Qi.css">
+    <link rel="stylesheet" crossorigin href="/audit-market/assets/index-Bf_3CweA.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="boot-splash">
+        <div class="boot-mark">✓</div>
+        <div class="boot-name">VeriOdds</div>
+        <div class="boot-ring" role="progressbar" aria-label="Loading"></div>
+        <div class="boot-text">Connecting to Solana devnet…</div>
+        <div class="boot-tag">Prediction markets you can verify</div>
+      </div>
+    </div>
   </body>
 </html>
